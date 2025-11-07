@@ -3,497 +3,1110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>InsulWorks | Professional Insulation Services | Melbourne</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>InsulWorks & PlasterHub - Melbourne's Premier Building Solutions</title>
     <style>
-        /* Reset and Base Styles */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
-        :root {
-            --primary: #1a5276;
-            --secondary: #3498db;
-            --accent: #f39c12;
-            --light: #f5f5f5;
-            --dark: #333;
-            --gray: #777;
-        }
-        
+
         html {
             scroll-behavior: smooth;
         }
-        
+
         body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
             line-height: 1.6;
-            color: var(--dark);
-            background-color: #fff;
+            color: #1a1a1a;
+            background: #ffffff;
+            overflow-x: hidden;
         }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        section {
-            padding: 80px 0;
-        }
-        
-        h1, h2, h3, h4 {
-            margin-bottom: 20px;
-            line-height: 1.2;
-        }
-        
-        h1 {
-            font-size: 2.8rem;
-        }
-        
-        h2 {
-            font-size: 2.2rem;
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        h2:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background-color: var(--accent);
-        }
-        
-        p {
-            margin-bottom: 15px;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            background-color: var(--accent);
-            color: white;
-            text-decoration: none;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background-color: #e67e22;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .btn-primary {
-            background-color: var(--primary);
-        }
-        
-        .btn-primary:hover {
-            background-color: #154360;
-        }
-        
-        /* Header Styles */
+
+        /* Header */
         header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            position: fixed;
-            width: 100%;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
             z-index: 1000;
+            backdrop-filter: blur(10px);
+            background-color: rgba(255, 255, 255, 0.95);
         }
-        
+
         .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1.2rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 0;
         }
-        
+
         .logo {
-            display: flex;
-            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
-        
-        .logo h1 {
-            font-size: 1.8rem;
-            margin-bottom: 0;
-            color: var(--primary);
+
+        .logo span.insul {
+            color: #1a5276;
         }
-        
-        .logo span {
-            color: var(--accent);
+
+        .logo span.works {
+            color: #f39c12;
         }
-        
+
+        .logo span.plaster {
+            color: #ffffff;
+            -webkit-text-stroke: 1px #1a1a1a;
+        }
+
+        .logo span.hub {
+            color: #e67e22;
+        }
+
+        .logo-subtitle {
+            font-size: 0.7rem;
+            color: #666;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+
         nav ul {
             display: flex;
             list-style: none;
+            gap: 3rem;
+            align-items: center;
         }
-        
-        nav ul li {
-            margin-left: 30px;
-        }
-        
-        nav ul li a {
+
+        nav a {
+            color: #333;
             text-decoration: none;
-            color: var(--dark);
+            font-size: 0.95rem;
             font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: var(--accent);
-        }
-        
-        .mobile-menu {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1592&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 180px 0 100px;
-            text-align: center;
-        }
-        
-        .hero h1 {
-            font-size: 3.2rem;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        /* Services Section */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-img {
-            height: 200px;
-            background-color: var(--light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: var(--primary);
-        }
-        
-        .service-content {
-            padding: 25px;
-        }
-        
-        .service-content h3 {
-            color: var(--primary);
-        }
-        
-        /* About Section */
-        .about {
-            background-color: var(--light);
-        }
-        
-        .about-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-        
-        .about-text {
-            flex: 1;
-        }
-        
-        .about-image {
-            flex: 1;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
-        /* Why Choose Us Section */
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
-        
-        .feature {
-            text-align: center;
-            padding: 30px 20px;
-        }
-        
-        .feature i {
-            font-size: 2.5rem;
-            color: var(--primary);
-            margin-bottom: 20px;
-        }
-        
-        .feature h3 {
-            color: var(--primary);
-        }
-        
-        /* Testimonials Section */
-        .testimonials {
-            background-color: var(--light);
-        }
-        
-        .testimonial-slider {
-            max-width: 800px;
-            margin: 0 auto;
             position: relative;
+            transition: color 0.2s;
         }
-        
-        .testimonial {
-            background-color: white;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            text-align: center;
-        }
-        
-        .testimonial-text {
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-        
-        .testimonial-author {
-            font-weight: 600;
-            color: var(--primary);
-        }
-        
-        /* Contact Section */
-        .contact-container {
-            display: flex;
-            gap: 50px;
-        }
-        
-        .contact-info {
-            flex: 1;
-        }
-        
-        .contact-form {
-            flex: 1;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 25px;
-        }
-        
-        .contact-item i {
-            font-size: 1.2rem;
-            color: var(--primary);
-            margin-right: 15px;
-            margin-top: 5px;
-        }
-        
-        .form-group {
-            margin-bottom: 20px;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: var(--primary);
-            color: white;
-            padding: 60px 0 30px;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            color: white;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3:after {
+
+        nav a::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -4px;
             left: 0;
-            width: 50px;
-            height: 3px;
-            background-color: var(--accent);
+            width: 0;
+            height: 2px;
+            background: #0066cc;
+            transition: width 0.3s;
         }
-        
-        .footer-links {
-            list-style: none;
+
+        nav a:hover::after {
+            width: 100%;
         }
-        
-        .footer-links li {
-            margin-bottom: 12px;
-        }
-        
-        .footer-links a {
-            color: #ddd;
+
+        .cta-header {
+            background: #0066cc;
+            color: white;
+            padding: 0.65rem 1.8rem;
+            border-radius: 4px;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
         }
-        
-        .footer-links a:hover {
-            color: var(--accent);
+
+        .cta-header:hover {
+            background: #0052a3;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0, 102, 204, 0.2);
         }
-        
-        .social-links {
+
+        /* Mobile Navigation */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+            padding: 0.5rem;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: white;
+            padding: 8rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 102, 204, 0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.8rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1.5rem;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #e0e0e0;
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .hero-buttons {
             display: flex;
-            gap: 15px;
-            margin-top: 20px;
+            gap: 1.5rem;
+            align-items: center;
         }
-        
-        .social-links a {
+
+        .btn {
+            padding: 1rem 2.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            text-align: center;
+            min-height: 54px;
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255,255,255,0.1);
-            border-radius: 50%;
+        }
+
+        .btn-primary {
+            background: #0066cc;
             color: white;
-            transition: all 0.3s ease;
         }
-        
-        .social-links a:hover {
-            background-color: var(--accent);
-            transform: translateY(-3px);
+
+        .btn-primary:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 102, 204, 0.3);
         }
-        
-        .copyright {
+
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #0a0a0a;
+        }
+
+        /* Stats */
+        .stats-section {
+            background: #f5f5f5;
+            padding: 4rem 2rem;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .stat-item {
             text-align: center;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-number {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+            font-size: 1rem;
+            font-weight: 500;
+        }
+
+        /* Why Choose Us Section */
+        .why-choose-us {
+            padding: 5rem 2rem;
+            background: #f5f5f5;
+        }
+
+        .why-choose-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .why-choose-text h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .why-choose-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .why-choose-features {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .why-choose-feature {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .why-choose-check {
+            width: 24px;
+            height: 24px;
+            background: #0066cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .why-choose-feature-text h4 {
+            font-weight: 600;
+            color: #0a0a0a;
+            margin-bottom: 0.3rem;
+        }
+
+        .why-choose-feature-text p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .why-choose-stats {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .why-choose-stat-item {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .why-choose-stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 0.5rem;
+        }
+
+        .why-choose-stat-label {
+            color: #666;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .why-choose-rating {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .why-choose-stars {
+            color: #ffc107;
+            font-size: 1.2rem;
+        }
+
+        .why-choose-rating-text {
             font-size: 0.9rem;
-            color: #ddd;
+            color: #666;
         }
-        
-        /* Responsive Styles */
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.4rem;
+
+        /* Services Section */
+        .services {
+            padding: 5rem 2rem;
+        }
+
+        .section-header {
+            max-width: 1400px;
+            margin: 0 auto 3.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: #666;
+            max-width: 500px;
+        }
+
+        .services-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 6px;
+            padding: 2.5rem;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: #0066cc;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #0a0a0a;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-link {
+            color: #0066cc;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .service-link:hover {
+            color: #0052a3;
+            transform: translateX(4px);
+        }
+
+        /* About Section */
+        .about {
+            background: #f5f5f5;
+            padding: 5rem 2rem;
+            border-top: 1px solid #e5e5e5;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .about-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .about-text h2 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
+        }
+
+        .about-features {
+            display: grid;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .feature-check {
+            width: 24px;
+            height: 24px;
+            background: #0066cc;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .feature-text h4 {
+            font-weight: 600;
+            color: #0a0a0a;
+            margin-bottom: 0.3rem;
+        }
+
+        .feature-text p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* Projects */
+        .projects {
+            padding: 5rem 2rem;
+        }
+
+        .projects-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            border-radius: 6px;
+            overflow: hidden;
+            background: white;
+            border: 1px solid #e5e5e5;
+            transition: all 0.3s;
+        }
+
+        .project-card:hover {
+            border-color: #0066cc;
+            box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 220px;
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            color: #0066cc;
+            padding: 0.4rem 0.8rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.8rem;
+            color: #0a0a0a;
+        }
+
+        .project-card p {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: #0a0a0a;
+            color: white;
+            padding: 5rem 2rem;
+            border-top: 1px solid #333;
+            border-bottom: 1px solid #333;
+        }
+
+        .testimonials .section-header h2 {
+            color: white;
+        }
+
+        .testimonials .section-header p {
+            color: #ccc;
+        }
+
+        .testimonials-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 2rem;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            border-color: #0066cc;
+            box-shadow: 0 12px 36px rgba(0, 102, 204, 0.2);
+        }
+
+        .testimonial-stars {
+            color: #ffc107;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .testimonial-text {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            color: #e0e0e0;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: white;
+        }
+
+        .testimonial-role {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Contact */
+        .contact {
+            padding: 5rem 2rem;
+        }
+
+        .contact-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .contact-item h4 {
+            font-weight: 600;
+            color: #0a0a0a;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-item p {
+            color: #666;
+        }
+
+        .contact-item a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            color: #0a0a0a;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            padding: 0.9rem 1rem;
+            border: 1px solid #e5e5e5;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #0066cc;
+            box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+            border-top: 1px solid #333;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #333;
+        }
+
+        .footer-col h4 {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-col p {
+            color: #999;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col a {
+            color: #999;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+            display: block;
+            margin-bottom: 0.7rem;
+        }
+
+        .footer-col a:hover {
+            color: #0066cc;
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
             }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .about-content {
-                flex-direction: column;
-            }
-            
-            .contact-container {
-                flex-direction: column;
+            to {
+                opacity: 1;
+                transform: translateY(0);
             }
         }
-        
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .hero h1 {
+            animation: slideInLeft 0.8s ease-out;
+        }
+
+        .hero p {
+            animation: slideInRight 0.8s ease-out 0.2s both;
+        }
+
+        .hero-buttons {
+            animation: fadeInUp 0.8s ease-out 0.4s both;
+        }
+
+        .service-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
+
+        .project-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .project-card:nth-child(1) { animation-delay: 0.1s; }
+        .project-card:nth-child(2) { animation-delay: 0.2s; }
+        .project-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .testimonial-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+        .testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+        .testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .stat-item {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .stat-item:nth-child(1) { animation-delay: 0.1s; }
+        .stat-item:nth-child(2) { animation-delay: 0.2s; }
+        .stat-item:nth-child(3) { animation-delay: 0.3s; }
+
+        .feature {
+            animation: slideInLeft 0.6s ease-out;
+        }
+
+        .feature:nth-child(1) { animation-delay: 0.1s; }
+        .feature:nth-child(2) { animation-delay: 0.2s; }
+        .feature:nth-child(3) { animation-delay: 0.3s; }
+        .feature:nth-child(4) { animation-delay: 0.4s; }
+
+        .testimonial-stars {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .cta-header {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-header::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            transform: translate(-50%, -50%);
+            transition: width 0.6s, height 0.6s;
+        }
+
+        .cta-header:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .service-icon {
+            display: inline-block;
+            animation: bounce 2s ease-in-out infinite;
+        }
+
+        .feature-check {
+            animation: bounce 1s ease-in-out infinite;
+        }
+
+        .feature-check:nth-child(1) { animation-delay: 0s; }
+        .feature-check:nth-child(2) { animation-delay: 0.2s; }
+        .feature-check:nth-child(3) { animation-delay: 0.4s; }
+        .feature-check:nth-child(4) { animation-delay: 0.6s; }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 1024px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            }
+        }
+
         @media (max-width: 768px) {
-            .mobile-menu {
+            .header-container {
+                flex-direction: row;
+                padding: 1rem;
+            }
+
+            .mobile-menu-toggle {
                 display: block;
             }
-            
+
             nav {
                 position: fixed;
-                top: 80px;
-                left: -100%;
+                top: 0;
+                right: -100%;
                 width: 80%;
-                height: calc(100vh - 80px);
-                background-color: white;
-                transition: left 0.3s ease;
-                box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+                max-width: 300px;
+                height: 100vh;
+                background: white;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+                transition: right 0.3s ease;
+                z-index: 1001;
+                padding: 2rem;
             }
-            
+
             nav.active {
-                left: 0;
+                right: 0;
             }
-            
+
             nav ul {
                 flex-direction: column;
-                padding: 30px;
+                gap: 1.5rem;
+                margin-top: 2rem;
             }
-            
-            nav ul li {
-                margin: 0 0 20px 0;
+
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                z-index: 1000;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 0.3s;
             }
-            
+
+            .overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
             .hero {
-                padding: 150px 0 80px;
+                padding: 6rem 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .services-grid,
+            .about-container,
+            .contact-wrapper,
+            .testimonials-grid,
+            .projects-grid,
+            .why-choose-container,
+            .stats-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .why-choose-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .services {
+                padding: 3rem 1rem;
+            }
+
+            .about, .why-choose-us, .projects, .testimonials, .contact {
+                padding: 3rem 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .service-card, .project-card, .testimonial-card {
+                padding: 1.5rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
             
-            .hero h1 {
-                font-size: 2.2rem;
+            .contact-wrapper {
+                gap: 2rem;
+            }
+            
+            .why-choose-container {
+                gap: 2rem;
             }
         }
-        
-        @media (max-width: 576px) {
-            section {
-                padding: 60px 0;
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: 4rem 1rem;
             }
             
             .hero h1 {
-                font-size: 1.8rem;
+                font-size: 2rem;
             }
-            
+
             .hero p {
                 font-size: 1rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .stat-number, .why-choose-stat-number {
+                font-size: 2rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-card, .project-card, .testimonial-card {
+                padding: 1.25rem;
+            }
+            
+            .btn {
+                padding: 0.9rem 1.5rem;
+                min-height: 50px;
             }
         }
     </style>
@@ -501,298 +1114,398 @@
 <body>
     <!-- Header -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <h1>Insul<span>Works</span></h1>
+        <div class="header-container">
+            <div>
+                <div class="logo">
+                    <span class="insul">Insul</span><span class="works">Works</span> & 
+                    <span class="insul">Plaster</span><span class="hub">Hub</span>
+                </div>
+                <div class="logo-subtitle">BUILDING SOLUTIONS</div>
             </div>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-            <nav>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+            <nav id="mainNav">
                 <ul>
-                    <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#why-us">Why Choose Us</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#projects">Projects</a></li>
                     <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><button class="cta-header" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Quote</button></li>
                 </ul>
             </nav>
+            <div class="overlay" id="overlay"></div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>Professional Insulation Services in Melbourne</h1>
-            <p>Enhance your comfort, reduce energy costs, and create a healthier environment with our premium insulation solutions.</p>
-            <a href="#contact" class="btn">Get Free Quote</a>
-            <a href="#services" class="btn btn-primary">Our Services</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Insulation Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-home"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Residential Insulation</h3>
-                        <p>Keep your home comfortable year-round with our expert residential insulation services for walls, roofs, and floors.</p>
-                        <a href="#contact" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-building"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Commercial Insulation</h3>
-                        <p>Improve energy efficiency and comfort in your commercial building with our professional insulation solutions.</p>
-                        <a href="#contact" class="btn">Learn More</a>
-                    </div>
-                </div>
-                <div class="service-card">
-                    <div class="service-img">
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <div class="service-content">
-                        <h3>Retrofit Insulation</h3>
-                        <p>Upgrade existing insulation in your property to improve thermal performance and reduce energy costs.</p>
-                        <a href="#contact" class="btn">Learn More</a>
-                    </div>
-                </div>
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Premium Insulation & Plastering Solutions</h1>
+            <p>Expert building solutions for residential and commercial properties across Melbourne. Enhance comfort, improve efficiency, and achieve flawless finishes.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get Free Quote</button>
+                <button class="btn btn-secondary" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Learn More</button>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <h2>About InsulWorks</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Melbourne's Trusted Insulation Experts</h3>
-                    <p>With over 15 years of experience serving Melbourne and surrounding areas, InsulWorks has established itself as a leader in professional insulation services.</p>
-                    <p>Our team of certified technicians is committed to delivering high-quality insulation solutions that enhance comfort, improve energy efficiency, and reduce environmental impact.</p>
-                    <p>We use only premium materials and follow industry best practices to ensure long-lasting results for both residential and commercial properties.</p>
-                    <a href="#contact" class="btn">Contact Us Today</a>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1582407947304-fd86f028f716?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1592&q=80" alt="Insulation installation">
-                </div>
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="stats-container">
+            <div class="stat-item">
+                <div class="stat-number">5+</div>
+                <div class="stat-label">Years of Experience</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">1,200+</div>
+                <div class="stat-label">Projects Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">98%</div>
+                <div class="stat-label">Client Satisfaction</div>
             </div>
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
-    <section id="why-us">
-        <div class="container">
-            <h2>Why Choose InsulWorks</h2>
-            <div class="features">
-                <div class="feature">
-                    <i class="fas fa-award"></i>
-                    <h3>Quality Guarantee</h3>
-                    <p>We stand behind our work with comprehensive warranties and guarantees for your peace of mind.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-users"></i>
-                    <h3>Expert Team</h3>
-                    <p>Our certified technicians have years of experience and ongoing training in the latest insulation techniques.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-leaf"></i>
-                    <h3>Eco-Friendly Solutions</h3>
-                    <p>We offer sustainable insulation options that reduce energy consumption and environmental impact.</p>
-                </div>
-                <div class="feature">
-                    <i class="fas fa-clock"></i>
-                    <h3>Timely Service</h3>
-                    <p>We respect your time and complete projects efficiently without compromising on quality.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials" id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-slider">
-                <div class="testimonial">
-                    <p class="testimonial-text">"InsulWorks transformed our home! We've noticed a significant decrease in our energy bills and our house is much more comfortable throughout the year. Highly recommended!"</p>
-                    <p class="testimonial-author">- Sarah Johnson, Brighton</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3>Get In Touch</h3>
-                    <p>Ready to improve your property's insulation? Contact us today for a free consultation and quote.</p>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Our Location</h4>
-                            <p>44, Perennial Drive, Truganina,, Melbourne VIC 3029</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Phone Number</h4>
-                            <p>(04) 5115 5674</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email Address</h4>
-                            <p>info@insulworks.com.au</p>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <i class="fas fa-clock"></i>
-                        <div>
-                            <h4>Business Hours</h4>
-                            <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                            <p>Saturday: 9:00 AM - 1:00 PM</p>
-                        </div>
-                    </div>
-                </div>
+    <!-- Why Choose Us -->
+    <section class="why-choose-us" id="why-choose-us">
+        <div class="why-choose-container">
+            <div class="why-choose-text">
+                <h2>Why Choose Us</h2>
+                <p>With over 5 years of experience, we've established ourselves as leaders in professional building solutions across Melbourne.</p>
                 
-                <div class="contact-form">
-                    <h3>Request a Quote</h3>
-                    <form id="quoteForm">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" class="form-control" required>
+                <div class="why-choose-features">
+                    <div class="why-choose-feature">
+                        <div class="why-choose-check">✓</div>
+                        <div class="why-choose-feature-text">
+                            <h4>5+ Years Experience</h4>
+                            <p>Trusted by thousands of Melbourne homeowners and businesses</p>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" class="form-control" required>
+                    </div>
+                    <div class="why-choose-feature">
+                        <div class="why-choose-check">✓</div>
+                        <div class="why-choose-feature-text">
+                            <h4>Licensed & Insured</h4>
+                            <p>Fully certified professionals with comprehensive insurance coverage</p>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    <div class="why-choose-feature">
+                        <div class="why-choose-check">✓</div>
+                        <div class="why-choose-feature-text">
+                            <h4>Quality Guarantee</h4>
+                            <p>We stand behind our work with comprehensive warranties</p>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="service">Service Required</label>
-                            <select id="service" class="form-control" required>
-                                <option value="">Select a service</option>
-                                <option value="residential">Residential Insulation</option>
-                                <option value="commercial">Commercial Insulation</option>
-                                <option value="retrofit">Retrofit Insulation</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" class="form-control" placeholder="Tell us about your project..."></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn">Submit Request</button>
-                    </form>
+                    </div>
                 </div>
             </div>
+            
+            <div class="why-choose-stats">
+                <div class="why-choose-stat-item">
+                    <div class="why-choose-stat-number">1,200+</div>
+                    <div class="why-choose-stat-label">Projects Completed</div>
+                </div>
+                <div class="why-choose-stat-item">
+                    <div class="why-choose-stat-number">4.9/5</div>
+                    <div class="why-choose-stat-label">Customer Rating</div>
+                    <div class="why-choose-rating">
+                        <div class="why-choose-stars">★★★★★</div>
+                        <div class="why-choose-rating-text">Rated 4.9/5 by our customers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="section-header">
+            <h2>Our Services</h2>
+            <p>Comprehensive solutions tailored to meet your specific needs</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Residential Insulation</h3>
+                <p>Comprehensive insulation solutions for homes including walls, roofs, floors, and crawl spaces to maximize comfort and energy efficiency.</p>
+                <a href="#contact" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏢</div>
+                <h3>Commercial Insulation</h3>
+                <p>Professional insulation for commercial buildings, offices, warehouses, and retail spaces to reduce energy costs and improve comfort.</p>
+                <a href="#contact" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔄</div>
+                <h3>Retrofit Insulation</h3>
+                <p>Upgrade existing insulation in your property to improve thermal performance, reduce energy costs, and enhance overall comfort.</p>
+                <a href="#contact" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">✨</div>
+                <h3>Residential Plastering</h3>
+                <p>Expert interior and exterior plastering for homes, creating smooth and durable finishes that enhance your property's appearance.</p>
+                <a href="#contact" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🏗️</div>
+                <h3>Commercial Plastering</h3>
+                <p>High-quality plastering services for offices, retail spaces, and commercial developments with professional finishing standards.</p>
+                <a href="#contact" class="service-link">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔧</div>
+                <h3>Plaster Repair & Restoration</h3>
+                <p>Specialist repair and restoration services to fix cracks, damage, and wear while maintaining aesthetic excellence.</p>
+                <a href="#contact" class="service-link">Learn More →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About InsulWorks & PlasterHub</h2>
+                <p>With over 5 years of experience serving Melbourne and surrounding areas, we've established ourselves as leaders in professional building solutions.</p>
+                <p>Our certified team is committed to delivering exceptional quality work that enhances comfort, improves energy efficiency, and creates beautiful, durable finishes for both residential and commercial properties.</p>
+                <div class="about-features">
+                    <div class="feature">
+                        <div class="feature-check">✓</div>
+                        <div class="feature-text">
+                            <h4>Quality Guarantee</h4>
+                            <p>Comprehensive warranties and guarantees for your peace of mind</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-check">✓</div>
+                        <div class="feature-text">
+                            <h4>Expert Team</h4>
+                            <p>Certified technicians with years of experience and ongoing training</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-check">✓</div>
+                        <div class="feature-text">
+                            <h4>Eco-Friendly Solutions</h4>
+                            <p>Sustainable options that reduce energy consumption and environmental impact</p>
+                        </div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-check">✓</div>
+                        <div class="feature-text">
+                            <h4>Timely Service</h4>
+                            <p>Efficient completion without compromising on quality</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="projects" id="projects">
+        <div class="section-header">
+            <h2>Recent Projects</h2>
+            <p>Showcasing our expertise across residential and commercial properties</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">🏢</div>
+                <div class="project-content">
+                    <span class="project-tag">PLASTERING</span>
+                    <h3>Modern Apartment Complex</h3>
+                    <p>Complete plastering for a new residential development in Southbank with flawless finishes and superior quality standards.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">🏛️</div>
+                <div class="project-content">
+                    <span class="project-tag">RESTORATION</span>
+                    <h3>Heritage Building Renovation</h3>
+                    <p>Period-accurate plaster restoration combined with modern insulation for a historic building in Carlton.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-image">💼</div>
+                <div class="project-content">
+                    <span class="project-tag">COMMERCIAL</span>
+                    <h3>Corporate Office Fit-out</h3>
+                    <p>Comprehensive commercial plastering and insulation services for a modern corporate office in Melbourne CBD.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-header">
+            <h2>Client Testimonials</h2>
+            <p>What our satisfied customers have to say</p>
+        </div>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"InsulWorks & PlasterHub transformed our home with exceptional work. The team was professional, punctual, and the quality exceeded expectations. Our energy bills decreased significantly. Highly recommended!"</p>
+                <p class="testimonial-author">Sarah Johnson</p>
+                <p class="testimonial-role">Brighton, VIC</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Outstanding service from start to finish. The attention to detail and professionalism impressed us. The commercial project was completed on time and within budget. We'll definitely work with them again."</p>
+                <p class="testimonial-author">Michael Chen</p>
+                <p class="testimonial-role">Melbourne CBD, VIC</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-stars">★★★★★</div>
+                <p class="testimonial-text">"Best decision for our renovation. The insulation upgrade significantly improved comfort, and the plastering is perfect. The team was respectful, efficient, and professional throughout the entire project."</p>
+                <p class="testimonial-author">Emma Williams</p>
+                <p class="testimonial-role">Hawthorn, VIC</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="section-header">
+            <h2>Get In Touch</h2>
+            <p>Ready to start your project? Contact us for a free consultation and quote</p>
+        </div>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <h4>📍 Address</h4>
+                    <p>44, Perennial Drive, Truganina,, Melbourne VIC 3029</p>
+                </div>
+                <div class="contact-item">
+                    <h4>📞 Phone</h4>
+                    <p><a href="tel:0451155674">(04) 5115 5674</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>✉️ Email</h4>
+                    <p><a href="mailto:info@insulwork.com.au">info@insulworks.com.au</a></p>
+                </div>
+                <div class="contact-item">
+                    <h4>🕐 Business Hours</h4>
+                    <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number</label>
+                    <input type="tel" required>
+                </div>
+                <div class="form-group">
+                    <label>Service Required</label>
+                    <select required>
+                        <option value="">Select a service</option>
+                        <option value="residential-insulation">Residential Insulation</option>
+                        <option value="commercial-insulation">Commercial Insulation</option>
+                        <option value="residential-plastering">Residential Plastering</option>
+                        <option value="commercial-plastering">Commercial Plastering</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Project Details</label>
+                    <textarea placeholder="Tell us about your project..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Submit Request</button>
+            </form>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>InsulWorks</h3>
-                    <p>Professional insulation services in Melbourne. Enhancing comfort and energy efficiency for residential and commercial properties.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About Us</a></li>
-                        <li><a href="#why-us">Why Choose Us</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Our Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Residential Insulation</a></li>
-                        <li><a href="#">Commercial Insulation</a></li>
-                        <li><a href="#">Retrofit Insulation</a></li>
-                        <li><a href="#">Energy Audits</a></li>
-                        <li><a href="#">Insulation Maintenance</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact Info</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> 44, Perennial Drive, Truganina,, Melbourne VIC 3029</li>
-                        <li><i class="fas fa-phone"></i> (04) 5115 5674</li>
-                        <li><i class="fas fa-envelope"></i> info@insulworks.com.au</li>
-                    </ul>
-                </div>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>InsulWorks & PlasterHub</h4>
+                <p>Expert building solutions for residential and commercial properties across Melbourne. Enhance comfort, improve efficiency, and achieve flawless finishes. Get Free Quote</p>
             </div>
-            
-            <div class="copyright">
-                <p>&copy; 2025 InsulWorks. All Rights Reserved.</p>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
+            <div class="footer-col">
+                <h4>Our Services</h4>
+                <ul>
+                    <li><a href="#services">Residential Insulation</a></li>
+                    <li><a href="#services">Commercial Insulation</a></li>
+                    <li><a href="#services">Retrofit Insulation</a></li>
+                    <li><a href="#services">Energy Audits</a></li>
+                    <li><a href="#services">Insulation Maintenance</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Info</h4>
+                <p>44, Perennial Drive, Truganina,, Melbourne VIC 3029</p>
+                <p><a href="tel:0312345678">(04) 5115 5674</a></p>
+                <p><a href="mailto:info@insulworks.com.au">info@insulworks.com.au</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 InsulWorks. All Rights Reserved.</p>
         </div>
     </footer>
 
     <script>
-        // Mobile Menu Toggle
-        const mobileMenu = document.querySelector('.mobile-menu');
-        const nav = document.querySelector('nav');
-        
-        mobileMenu.addEventListener('click', () => {
-            nav.classList.toggle('active');
-        });
-        
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('Thank you for your inquiry! We will get back to you shortly.');
+            event.target.reset();
+        }
+
+        // Mobile menu functionality
+        const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+        const mainNav = document.getElementById('mainNav');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMobileMenu() {
+            mainNav.classList.toggle('active');
+            overlay.classList.toggle('active');
+            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+        overlay.addEventListener('click', toggleMobileMenu);
+
         // Close mobile menu when clicking on a link
-        const navLinks = document.querySelectorAll('nav ul li a');
+        const navLinks = document.querySelectorAll('nav a');
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                nav.classList.remove('active');
+                if (window.innerWidth <= 768) {
+                    toggleMobileMenu();
+                }
             });
         });
-        
-        // Form Submission
-        const quoteForm = document.getElementById('quoteForm');
-        quoteForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('Thank you for your inquiry! We will contact you shortly.');
-            quoteForm.reset();
-        });
+
+        // Adjust animations for mobile devices
+        function checkMobile() {
+            if (window.innerWidth <= 768) {
+                // Reduce or disable some animations on mobile
+                document.documentElement.style.setProperty('--animation-speed', '0.5s');
+            } else {
+                document.documentElement.style.setProperty('--animation-speed', '1s');
+            }
+        }
+
+        // Check on load and resize
+        window.addEventListener('load', checkMobile);
+        window.addEventListener('resize', checkMobile);
     </script>
 </body>
 </html>
-
